@@ -9,11 +9,11 @@ export const navData: Array<navData> = [
     path: "/",
   },
   {
-    title: "blogs",
+    title: "Blogs",
     path: "/blogs",
   },
   {
-    title: "projects",
+    title: "Projects",
     path: "/projects",
   },
 ];

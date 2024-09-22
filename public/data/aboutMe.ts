@@ -29,6 +29,6 @@ export const aboutMeData: Audience[] = [
   {
     audienceType: "Aspiring Developers",
     intro:
-      "As a seasoned Full Stack Developer with expertise in microservices architecture and emerging AI technologies, I combine technical proficiency with innovative problem-solving. My adaptability to fast-paced environments and track record of delivering scalable, high-performance solutions make me a valuable asset to dynamic teams. I excel at driving results in challenging projects that align with forward-thinking goals and contribute to business growth.",
+      "As a Full Stack Developer, I’m passionate about building scalable, high-performance applications and constantly refining my skills. Together, we can explore clean code practices, tackle complex problems, and dive into the latest technologies. Let’s collaborate and grow as developers while pushing the boundaries of what we can create.",
   },
 ];
