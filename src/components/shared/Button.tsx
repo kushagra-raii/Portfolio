@@ -14,12 +14,18 @@ const Button = ({ text, onClick, primary, href, type }: ButtonProps) => {
     "hover:shadow-md": true,
     "hover:scale-95": true,
     "rounded-md": true,
-    "bg-gray-Charcoal": true,
-    "text-gray-Light": true,
+    "text-gray-Light":!primary,
+    "bg-gray-Charcoal":!primary,
+    
     "cursor-pointer": true,
     "text-center": true,
-    "px-2": true,
+    "px-3": true,
     "py-1":true,
+    border:true,
+    "bg-gray-Light": primary,
+    // "text-gray-Charcoal": primary,
+    "text-gray-Charcoal":primary,
+    
 
   });
 

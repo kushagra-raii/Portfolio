@@ -4,6 +4,7 @@ import "./../globals.css";
 
 import Footer from "@/components/shared/Footer";
 import Navbar from "@/components/shared/Navbar";
+import Header from "@/components/shared/Header";
 
 const inter = Roboto({ weight: ["300", "400","500", "700"], subsets: ["latin"] });
 
@@ -20,9 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-Charcoal`}>
+        <Header/>
         <Navbar/>
       {children}
-      {/* <Footer/> */}
+      <Footer/>
       </body>
     </html>
   );
