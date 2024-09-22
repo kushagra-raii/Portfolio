@@ -1,19 +1,19 @@
 type navData = {
-    title: string,
-    path: string,
-}
+  title: string;
+  path: string;
+};
 
 export const navData: Array<navData> = [
-    {
-        title: 'Home',
-        path: '/',
-    },
-    {
-        title: "About",
-        path: '/about',
-    },
-    {
-        title: "blog",
-        path: '/blog',
-    }
-] 
+  {
+    title: "Home",
+    path: "/",
+  },
+  {
+    title: "blogs",
+    path: "/blogs",
+  },
+  {
+    title: "projects",
+    path: "/projects",
+  },
+];

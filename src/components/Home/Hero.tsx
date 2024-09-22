@@ -1,23 +1,38 @@
-import React from "react";
-import Button from "../shared/Button";
+"use client";
+
+import React, { useState } from "react";
+import { aboutMeData } from "@/../public/data/aboutMe"; // Import the data
+
 
 const HeroSection: React.FC = () => {
+  const [selectedAudience, setSelectedAudience] = useState<string>("For Everyone");
+
+  // Find the current intro based on the selected audience
+  const currentIntro = aboutMeData.find(
+    (audience) => audience.audienceType === selectedAudience
+  )?.intro;
+
   return (
-    <section className="flex flex-col items-center justify-center min-h-screen text-start gap-y-4 w-3/4 lg:w-1/2 mx-auto bg-gray-Charcoal px-4">
-      <div className="flex flex-col w-full text-nowrap">
-        <h1 className="text-2xl sm:text-3xl md:text-5xl self-start font-bold text-gray-Light mb-2">
-          Full-Stack
-        </h1>
-        <h2 className="text-2xl sm:text-3xl md:text-5xl sm:pl-12 lg:pl-24 font-bold text-gray-Light mb-6">
-          Software Developer
-        </h2>
-      </div>
-      <p className="text-lg text-gray-Light tracking-wide text-justify mb-8 w-full text">
-        Hi! I’m <strong>Kushagra</strong>, specialized in building <strong>high-performance, scalable web applications</strong>. Based in <em>Indore, India</em>. Let’s build something amazing together.
-      </p>
-      <div className="self-start">
-        <Button primary={false} text="Let’s connect" />
-      </div>
+    <section className="flex flex-col backdrop-blur-lg bg-black bg-opacity-30  items-center justify-center my-2 py-10 shadow-md shadow-black/50 text-start w-3/4 lg:w-1/2 mx-auto  px-4">
+      {/* Audience Selection Nav */}
+      <nav className="flex mb-6 text-nowrap text-sm -mr-3 font-[cursive]">
+        {aboutMeData.map((audience) => (
+          <button
+            key={audience.audienceType}
+            className={`px-2 py-1 underline rounded-md ${
+              selectedAudience === audience.audienceType
+                ? " text-gray-Light" // Selected state
+                : "text-gray-500  hover:text-gray-Light" // Unselected with hover effect
+            }`}
+            onClick={() => setSelectedAudience(audience.audienceType)}
+          >
+            {audience.audienceType}
+          </button>
+        ))}
+      </nav>
+
+      {/* Intro Text */}
+      <p className="font-medium text-justify text-gray-Light mx-2">{currentIntro}</p>
     </section>
   );
 };

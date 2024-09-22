@@ -11,13 +11,13 @@ const Navbar = () => {
   
   return (
     <nav
-      className={`border-[0.2px] border-slate-800 fixed text-nowrap max-w-screen text-sm bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-lg bg-black bg-opacity-30 rounded-lg px-1 py-1 flex justify-center gap-x-5 items-center `}
+      className={`border-[0.2px] z-10 border-slate-800 shadow-lg shadow-black/50 fixed text-nowrap max-w-screen text-sm bottom-5 left-1/2 transform -translate-x-1/2 backdrop-blur-lg bg-black bg-opacity-30 rounded-lg px-1 py-1 flex justify-center gap-x-5 items-center `}
     >
       {navData.map((nav, index) => (
         <div key={index} className="flex items-center">
           <Link
             href={nav.path}
-            className="text-white p-2  hover:text-pale-yellow"
+            className="text-white p-2 underline hover:text-pale-yellow"
           >
             {nav.title}
           </Link>
