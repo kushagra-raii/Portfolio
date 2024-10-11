@@ -3,11 +3,11 @@ import { Nunito_Sans } from "next/font/google";
 import React, { useState } from "react";
 import { aboutMeData } from "@/../public/data/aboutMe"; 
 import "./hero.css";
-import ForEveryone from "./Hero/ForEveryone"; 
-import Developers from "./Hero/Developers";
-import Founders from "./Hero/Founders";
-import Recruiters from "./Hero/Recruiters";
-import SDE from "./Hero/SDE";
+import ForEveryone from "./TargetAudiencePropositions/ForEveryone"; 
+import Developers from "./TargetAudiencePropositions/Developers";
+import Founders from "./TargetAudiencePropositions/Founders";
+import Recruiters from "./TargetAudiencePropositions/Recruiters";
+import SDE from "./TargetAudiencePropositions/SDE";
 const nunito = Nunito_Sans({ weight: ["300", "400","500", "700"], subsets: ["latin"] });
 
 
@@ -33,9 +33,14 @@ const HeroSection: React.FC = () => {
   };
 
   return (
-    <section className="flex flex-col backdrop-blur-lg bg-black bg-opacity-30 items-center justify-center my-2 py-10 shadow-md shadow-black/50 text-start w-3/4 lg:w-1/2 mx-auto px-4">
+    <section className="flex flex-col backdrop-blur-lg border-b border-slate-600 items-center justify-center my-2 py-10  text-start w-3/4 lg:w-1/2 mx-auto px-4">
+      <h2
+        className={`font-mono text-lg self-start text-gray-Light`}
+      >
+        About
+      </h2>
       {/* Audience Selection Nav */}
-      <nav className="flex mb-6 text-nowrap self-center overflow-x-auto text-sm  w-full mx-auto scrollbar-hide ">
+      <nav className="flex mb-6 text-nowrap self-center my-4 overflow-x-auto text-sm  w-full mx-auto scrollbar-hide ">
         {aboutMeData.map((audience) => (
           <button
             key={audience.audienceType}
